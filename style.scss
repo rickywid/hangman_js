@@ -1,0 +1,124 @@
+
+
+body{
+	text-align: center;
+	font-family: arial;
+	background-image: url('http://www.goliath.com/wp-content/uploads/2015/09/Vanna_Blank_Board.jpg');
+	color: white;
+	font-size: 16px;
+	height: 550px;
+}
+
+#word-holder {
+	width: 73%;
+	margin: 0 auto;
+}
+
+#alphabetList {
+	position: absolute;
+	bottom: 0;
+	.letters {
+		color: white;
+		font-size: 87%;
+		font-weight: bolder;
+		display: inline-block;
+		margin-right: 20px;
+		padding: 5px;
+		border: 3px solid #2D48CF;
+		border-radius: 5px;
+		background-color: #31ABFD;
+	}
+
+	.letters:hover{
+		color: white;
+		font-size: 87%;
+		font-weight: bolder;
+		display: inline-block;
+		margin-right: 20px;
+		padding: 5px;
+		border: 3px solid #2D48CF;
+		border-radius: 5px;
+		background-color: #31ABFD;
+		opacity: 0.3;		
+	}
+
+	.active{
+		color: white;
+		font-size: 87%;
+		font-weight: bolder;
+		display: inline-block;
+		margin-right: 20px;
+		padding: 5px;
+		border: 3px solid #2D48CF;
+		border-radius: 5px;
+		background-color: #31ABFD;
+		opacity: 0.3;		
+	}
+}
+
+#buttons {
+	position: absolute;
+	left: 50px;
+	bottom: 140px;
+
+	#hintBtn{
+		border: 3px solid #CF2D2D;
+		background-color: #ED5E53;
+		padding: 5px;
+		font-size: 120%;
+		font-weight: bolder;
+		border-radius: 5px;
+		color: white;
+	}
+	#playBtn{
+		color: white;
+		border: 3px solid #CF2D2D;
+		background-color: #ED5E53;
+		padding: 5px;
+		font-size: 120%;
+		font-weight: bolder;
+		border-radius: 5px;
+	}
+}
+
+#categoryName{
+	color: black;
+	font-weight: bolder;
+	background-color: rgba(255, 255, 0, 0.64);
+	border: 5px solid yellow;
+	padding: 10px 15px;
+	text-align: center;
+	display: inline-block;
+	margin-top: 100px;
+}
+
+#lives {
+	font-weight: bolder;
+	font-size: 150%;
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+	width: 40%;
+	margin: 0 auto;
+	padding: 5px;
+}
+
+#emptyWord {
+	margin-top: 140px;
+	#world-holder {}
+}
+
+.letterHolder {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.blank {
+	display: inline-block;
+	margin: 15px;
+	font-size: 500%;
+	width: 47px
+}
+
+#header {
+	text-decoration: underline;
+}
