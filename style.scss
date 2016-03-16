@@ -3,7 +3,7 @@
 body{
 	text-align: center;
 	font-family: arial;
-	background-image: url('http://www.goliath.com/wp-content/uploads/2015/09/Vanna_Blank_Board.jpg');
+	background-image: url('http://i.imgur.com/hlI3CPY.jpg');
 	color: white;
 	font-size: 16px;
 	height: 550px;
@@ -39,7 +39,8 @@ body{
 		border: 3px solid #2D48CF;
 		border-radius: 5px;
 		background-color: #31ABFD;
-		opacity: 0.3;		
+		opacity: 0.3;	
+		cursor: pointer;	
 	}
 
 	.active{
@@ -69,6 +70,7 @@ body{
 		font-weight: bolder;
 		border-radius: 5px;
 		color: white;
+		cursor: pointer;
 	}
 	#playBtn{
 		color: white;
@@ -78,6 +80,7 @@ body{
 		font-size: 120%;
 		font-weight: bolder;
 		border-radius: 5px;
+		cursor: pointer;
 	}
 }
 

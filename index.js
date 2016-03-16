@@ -49,10 +49,12 @@ window.onload = function(){
 			this.setAttribute('class', 'active');
 
 			//place letter inside variable to compare with word letters
-			letterGuess = this.innerHTML;
-
+			letterGuess = this.innerHTML.toLowerCase();
+			
 			for(var i = 0; i < word.length; i++)
 				if(word[i] === letterGuess){
+
+					console.log(letterGuess)
 					counter++
 					renderLives();
 					guesses[i].innerHTML = letterGuess;
@@ -100,7 +102,6 @@ window.onload = function(){
 			}
 
 			guesses.push(list);
-			
 			wordHolder.appendChild(list);
 			emptyWord.appendChild(wordHolder);
 		}
@@ -132,7 +133,7 @@ window.onload = function(){
 		//select random word
 		word = selectCategory[Math.floor(Math.random() * selectCategory.length)];
 
-
+		console.log(word);
 
 		renderLetters();
 		renderBlanks();
