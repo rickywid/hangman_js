@@ -119,9 +119,17 @@ body{
 	display: inline-block;
 	margin: 15px;
 	font-size: 500%;
-	width: 47px
+	width: 27px
 }
 
 #header {
 	text-decoration: underline;
+}
+
+#clue {
+	font-size: 150%;
+	background-color: rgba(0,0,0,0.5);
+	width: 40%;
+	padding: 5px;
+	margin: 0 auto;
 }

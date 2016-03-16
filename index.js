@@ -21,7 +21,7 @@ window.onload = function(){
 	var letterGuess;		//guessed letter
 	var counter;			//counter used to compare with guess array. if values = , user wins
 	var guesses = [];		//array used to store length of word
-	var lives = 10;
+	var lives = 5;
 	var counter = 0;
 	var selectCategory;
 
@@ -54,8 +54,8 @@ window.onload = function(){
 			for(var i = 0; i < word.length; i++)
 				if(word[i] === letterGuess){
 
-					console.log(letterGuess)
 					counter++
+					console.log(counter)
 					renderLives();
 					guesses[i].innerHTML = letterGuess;
 				}
@@ -104,28 +104,33 @@ window.onload = function(){
 			guesses.push(list);
 			wordHolder.appendChild(list);
 			emptyWord.appendChild(wordHolder);
+			console.log(guesses.length);
 		}
 	}
 
 	var category = function(){
 		if(selectCategory === categories[0]){
-			getCategoryName.innerHTML = "Perth"
+			getCategoryName.innerHTML = "Knockout Artists"
 		}
 		if(selectCategory === categories[1]){
-			getCategoryName.innerHTML = "Australia"
+			getCategoryName.innerHTML = "Old Skool"
 		}
 		if(selectCategory === categories[2]){
-			getCategoryName.innerHTML = "Bundy"
+			getCategoryName.innerHTML = "P4P Legends"
+		}
+		if(selectCategory === categories[3]){
+			getCategoryName.innerHTML = "Characters of the Game"
 		}
 	}
 
 	var play = function(){
-		console.log('replay called')
+
 		//create categories
 		categories = [
-			['mustang', 'kings-park', 'fremantle'],
-			['melbourne', 'sydney', 'bundaberg'],
-			['globe-hotel', 'flood', 'northside']
+			['pacman', 'golovkin', 'dr-steelhammer', 'iron-mike', 'prince-naseem', 'tito', 'krusher-kovalev','foreman','chino','cotto'],
+			['marciano', 'ray-robinson', 'manassa-mauler','sonny-liston', 'willie-pep', 'smokin-joe', 'brown-bomber','raging-bull'],
+			['money-may', 'jcc', 'cassius-clay', 'rjj', 'bhop', 'marvelous-marvin', 'golden-boy','sweet-pea', 'lennox-lewis'],
+			['broner', 'malignaggi', 'mayorga', 'tyson-fury', 'briggs', 'sam-peters', 'hitman-hatton']
 		]
 
 		//select random category
@@ -133,8 +138,8 @@ window.onload = function(){
 		//select random word
 		word = selectCategory[Math.floor(Math.random() * selectCategory.length)];
 
-		console.log(word);
-
+		//console.log(word);
+		guesses = [];
 		renderLetters();
 		renderBlanks();
 		renderLives();
@@ -149,10 +154,12 @@ window.onload = function(){
 	getHintBtn.onclick = function(){
 
 		hints = [
-			['Friday, Saturday, Sunday Night', "High in the sky", "cottlesloe beach"],
-			['federation square', 'opera house', 'farming'],
-			['get pissed everyday', 'water everywhere', 'wayne the driver']
+			['Gays is worst than animals', 'Big drama show', 'Married to Claire Bennett', 'Once the baddest man in the world', 'Damn Im looking good', 'PR boxing icon', 'Proably did it with Duva', 'The Grill', 'Im fat now..', 'Vindicated loss to Mexican rival'],
+			['Brockton boxer', 'Had 91 fight unbeaten streak', 'the Long Count Controversy', 'Controversial 1964 Rematch', 'Won a round without throwing a punch', 'Deadly left hook', 'Home of Detroid Red Wings', 'Scorsece directed a film based on him'],
+			['Lifestle flassshy', 'GOAT Mexican boxer', 'GOAT', 'Yall mustve forgot!', 'From prison to MW champ', 'Later moved to Italy', 'He has the blueprint', 'Cant be touched', 'Im #1 No guy test'],
+			['Brush my hair','Got a haircut in round 8','I dont give a f*ck','I dont want to miss a thing','Lets go champ!', 'WHO NECKS!!!', 'Greatest wrestler of all time']
 		]
+
 		categoriesIndex = categories.indexOf(selectCategory);
 		wordIndex = selectCategory.indexOf(word);
 
@@ -165,7 +172,6 @@ window.onload = function(){
 		wordHolder.parentNode.removeChild(wordHolder);
 		ul.parentNode.removeChild(ul);
 		clue.innerHTML = "";
-		
 		play();
 	}
 }
