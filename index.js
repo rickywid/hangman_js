@@ -111,16 +111,16 @@ window.onload = function(){
 
 	var category = function(){
 		if(selectCategory === categories[0]){
-			getCategoryName.innerHTML = "Knockout Artists"
+			getCategoryName.innerHTML = "Cities"
 		}
 		if(selectCategory === categories[1]){
-			getCategoryName.innerHTML = "Old Skool"
+			getCategoryName.innerHTML = "Sports"
 		}
 		if(selectCategory === categories[2]){
-			getCategoryName.innerHTML = "P4P Legends"
+			getCategoryName.innerHTML = "Music"
 		}
 		if(selectCategory === categories[3]){
-			getCategoryName.innerHTML = "Characters of the Game"
+			getCategoryName.innerHTML = "TV Shows"
 		}
 	}
 
@@ -128,10 +128,10 @@ window.onload = function(){
 
 		//create categories
 		categories = [
-			['pacman', 'golovkin', 'wladamir', 'iron-mike', 'prince-naseem', 'tito', 'krusher-kovalev','foreman','chino','cotto'],
-			['marciano', 'ray-robinson', 'manassa-mauler','sonny-liston', 'willie-pep', 'smokin-joe', 'brown-bomber','raging-bull'],
-			['money-may', 'jcc', 'cassius-clay', 'rjj', 'bhop', 'marvin-hagler', 'golden-boy','sweet-pea', 'lennox-lewis'],
-			['broner', 'malignaggi', 'mayorga', 'tyson-fury', 'briggs', 'sam-peters', 'hitman-hatton']
+			['toronto', 'sydney', 'tokyo', 'paris', 'london', 'tijuana', 'havana','sao-paulo','moscow','venice'],		
+			['blue-jays', 'yankees', 'red-sox', 'patriots', 'cowboys', 'maple-leafs', 'red-wings', 'bruins'],
+			['taylor-swift', 'kanye-west', 'celine-dion', 'elvis', 'thriller', 'jimi-hendrix', 'rihanna', 'drake', 'rolling-stones'],
+			['lost', 'breaking-bad', 'daredevil', 'fresh-prince', 'south-park', 'full-house', 'sopranos']
 		]
 
 		//select random category
@@ -159,10 +159,10 @@ window.onload = function(){
 	getHintBtn.onclick = function(){
 
 		hints = [
-			['Gays is worst than animals', 'Big drama show', 'Married to Claire Bennett', 'Once the baddest man in the world', 'Damn Im looking good', 'PR boxing icon', 'Proably did it with Duva', 'The Grill', 'Im fat now..', 'Vindicated loss to Mexican rival'],
-			['Brockton boxer', 'Had 91 fight unbeaten streak', 'the Long Count Controversy', 'Controversial 1964 Rematch', 'Won a round without throwing a punch', 'Deadly left hook', 'Home of Detroid Red Wings', 'Scorsece directed a film based on him'],
-			['Lifestle flassshy', 'GOAT Mexican boxer', 'GOAT', 'Yall mustve forgot!', 'From prison to MW champ', 'Later moved to Italy', 'He has the blueprint', 'Cant be touched', 'Im #1 No guy test'],
-			['Brush my hair','Got a haircut in round 8','I dont give a f*ck','I dont want to miss a thing','Lets go champ!', 'WHO NECKS!!!', 'Greatest wrestler of all time']
+			['4th higest population in North America', 'Home of Bondi Beach', 'Was previously known as Edo', 'Most romantic city in the world', 'Home of Heathrow Airport', 'Lies on US-Mexican border', 'Colorful city of Cuba', 'Birthplace of Neymar', 'Location of St. Basil Cathedral', 'City of canals'],
+			['Ended 22 year playoff drought', 'Richest MLB franchise', 'Yankees Rival', 'Lead by Tom Brady', 'Richest NFL franchise', 'Won Stanley Cup in \'67', 'Plays in Joe Louis Arena', 'One of the original six teams'],
+			['Has won too many awards to count', 'Controversial rapper', 'My Heart Will Go On', 'King of Rock n Roll', 'Highest selling album of all time', 'Known for his guitar skills', 'Born in Barbados', 'Canadian rapper', 'Lead Vocalist Mick Jagger'],
+			['Strangers stuck on an island','School teacher turned drug dealer','Blind superhero', 'Will & Carlton', '4 kids in Colorado', 'Opposite of an empty house', 'Mobster and his family']
 		]
 
 		categoriesIndex = categories.indexOf(selectCategory);
