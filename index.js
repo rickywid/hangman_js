@@ -20,9 +20,9 @@ window.onload = function(){
 	var letterBtn;	 		//letter buttons
 	var letterGuess;		//guessed letter
 	var counter;			//counter used to compare with guess array. if values = , user wins
-	var guesses = [];		//array used to store length of word
-	var lives = 5;
-	var counter = 0;
+	var guesses;		//array used to store length of word
+	var lives;
+	var counter;
 	var selectCategory;
 
 	//Render letters on screen
@@ -50,14 +50,14 @@ window.onload = function(){
 
 			//place letter inside variable to compare with word letters
 			letterGuess = this.innerHTML.toLowerCase();
-			
+						
 			for(var i = 0; i < word.length; i++)
 				if(word[i] === letterGuess){
 
 					counter++
-					console.log(counter)
+					console.log("counter: " + counter)
 					renderLives();
-					guesses[i].innerHTML = letterGuess;
+					guesses[i].innerHTML = letterGuess.toUpperCase();
 				}
 
 				//check to see if guessed letter exists in word
@@ -75,6 +75,7 @@ window.onload = function(){
 		getLives.innerHTML =  lives + " guesses left";
 
 		if(lives < 1){
+			console.log("lives: " + lives)
 			getLives.innerHTML = "You Lose";
 		}
 
@@ -104,7 +105,7 @@ window.onload = function(){
 			guesses.push(list);
 			wordHolder.appendChild(list);
 			emptyWord.appendChild(wordHolder);
-			console.log(guesses.length);
+			console.log("word length: " + guesses.length);
 		}
 	}
 
@@ -127,9 +128,9 @@ window.onload = function(){
 
 		//create categories
 		categories = [
-			['pacman', 'golovkin', 'dr-steelhammer', 'iron-mike', 'prince-naseem', 'tito', 'krusher-kovalev','foreman','chino','cotto'],
+			['pacman', 'golovkin', 'wladamir', 'iron-mike', 'prince-naseem', 'tito', 'krusher-kovalev','foreman','chino','cotto'],
 			['marciano', 'ray-robinson', 'manassa-mauler','sonny-liston', 'willie-pep', 'smokin-joe', 'brown-bomber','raging-bull'],
-			['money-may', 'jcc', 'cassius-clay', 'rjj', 'bhop', 'marvelous-marvin', 'golden-boy','sweet-pea', 'lennox-lewis'],
+			['money-may', 'jcc', 'cassius-clay', 'rjj', 'bhop', 'marvin-hagler', 'golden-boy','sweet-pea', 'lennox-lewis'],
 			['broner', 'malignaggi', 'mayorga', 'tyson-fury', 'briggs', 'sam-peters', 'hitman-hatton']
 		]
 
@@ -140,6 +141,10 @@ window.onload = function(){
 
 		//console.log(word);
 		guesses = [];
+		counter = 0;
+		lives = 5;
+
+		console.log("counter: " + counter);
 		renderLetters();
 		renderBlanks();
 		renderLives();
