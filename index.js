@@ -130,7 +130,7 @@ window.onload = function(){
 		categories = [
 			['toronto', 'sydney', 'tokyo', 'paris', 'london', 'tijuana', 'havana','sao-paulo','moscow','venice'],		
 			['blue-jays', 'yankees', 'red-sox', 'patriots', 'cowboys', 'maple-leafs', 'red-wings', 'bruins'],
-			['taylor-swift', 'kanye-west', 'celine-dion', 'elvis', 'thriller', 'jimi-hendrix', 'rihanna', 'drake', 'rolling-stones'],
+			['taylor-swift', 'kanye-west', 'celine-dion', 'elvis', 'thriller', 'madonna', 'rihanna', 'drake', 'bee-gees'],
 			['lost', 'breaking-bad', 'daredevil', 'fresh-prince', 'south-park', 'full-house', 'sopranos']
 		]
 
@@ -161,7 +161,7 @@ window.onload = function(){
 		hints = [
 			['4th higest population in North America', 'Home of Bondi Beach', 'Was previously known as Edo', 'Most romantic city in the world', 'Home of Heathrow Airport', 'Lies on US-Mexican border', 'Colorful city of Cuba', 'Birthplace of Neymar', 'Location of St. Basil Cathedral', 'City of canals'],
 			['Ended 22 year playoff drought', 'Richest MLB franchise', 'Yankees Rival', 'Lead by Tom Brady', 'Richest NFL franchise', 'Won Stanley Cup in \'67', 'Plays in Joe Louis Arena', 'One of the original six teams'],
-			['Has won too many awards to count', 'Controversial rapper', 'My Heart Will Go On', 'King of Rock n Roll', 'Highest selling album of all time', 'Known for his guitar skills', 'Born in Barbados', 'Canadian rapper', 'Lead Vocalist Mick Jagger'],
+			['Has won too many awards to count', 'Controversial rapper', 'My Heart Will Go On', 'King of Rock n Roll', 'Highest selling album of all time', 'Queen of Pop', 'Born in Barbados', 'Canadian rapper', 'Stayin Alive'],
 			['Strangers stuck on an island','School teacher turned drug dealer','Blind superhero', 'Will & Carlton', '4 kids in Colorado', 'Opposite of an empty house', 'Mobster and his family']
 		]
 
