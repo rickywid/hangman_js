@@ -135,10 +135,10 @@ window.onload = function(){
 
 		//create categories
 		categories = [
-			['toronto', 'sydney', 'tokyo', 'paris', 'london', 'tijuana', 'havana','sao-paulo','moscow','venice'],		
+			['toronto', 'sydney', 'tokyo', 'paris', 'london', 'tijuana', 'havana','las-vegas','moscow','venice'],		
 			['blue-jays', 'yankees', 'red-sox', 'david-beckham', 'cowboys', 'maple-leafs', 'lionel-messi', 'don-king'],
 			['taylor-swift', 'kanye-west', 'beyonce', 'elvis', 'thriller', 'madonna', 'rihanna', 'drake', 'beatles'],
-			['lost', 'breaking-bad', 'daredevil', 'fresh-prince', 'south-park', 'full-house', 'sopranos']
+			['lost', 'breaking-bad', 'daredevil', 'fresh-prince', 'south-park', 'sesame street', 'jeopardy']
 		]
 
 		//select random category
@@ -172,10 +172,10 @@ window.onload = function(){
 	getHintBtn.onclick = function(){
 
 		hints = [
-			['4th highest population in North America', 'Home of Bondi Beach', 'Was previously known as Edo', 'Most romantic city in the world', 'Home of Heathrow Airport', 'Lies on US-Mexican border', 'Colorful city of Cuba', 'Birthplace of Neymar', 'Location of St. Basil Cathedral', 'City of canals'],
-			['Ended 22 year playoff drought', 'Richest MLB franchise', 'Team of Fenway Park', 'Married to a Spice Girl', 'Richest NFL franchise', 'Won Stanley Cup in \'67', 'Argentinian soccer superstar', 'Legendary boxing promoter (he has tall hair)'],
+			['4th highest population in North America', 'Home of Bondi Beach', 'Was previously known as Edo', 'Most romantic city in the world', 'Home of Heathrow Airport', 'Lies on US-Mexican border', 'Colorful city of Cuba', 'aka Sin City', 'Location of St. Basil Cathedral', 'City of canals'],
+			['Ended 22 year playoff drought', 'Richest MLB franchise', 'Team of Fenway Park', 'Married to a Spice Girl', 'Richest NFL franchise', 'Won Stanley Cup in \'67', 'Argentinian soccer superstar', 'Iconic boxing promoter'],
 			['Country turned Pop singer', 'Musician, Artist, Fashion Designer', 'Former lead singer of popular RnB group', 'King of Rock n Roll', 'Highest selling album of all time', 'Queen of Pop', 'Born in Barbados', 'Canadian rapper', '4 member band from Liverpool'],
-			['Survivors stuck on a mysterious island','School teacher turned drug dealer','Blind superhero', '3 children & 1 nephew living together', '4 kids in Colorado', 'Opposite of an empty house', 'Mobster and his family']
+			['Survivors stuck on a mysterious island','School teacher turned drug dealer','Blind superhero', '3 children & 1 nephew living together', '4 kids in Colorado', 'Classic children\'s TV show', 'Answer given as the question']
 		]
 
 		categoriesIndex = categories.indexOf(selectCategory);
