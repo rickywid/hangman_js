@@ -7,6 +7,7 @@ window.onload = function(){
 
 	//Get elements
 	var getLives = document.getElementById('lives');
+	var getOutcome = document.getElementById('outcome');
 	var getCategoryName = document.getElementById('categoryName');
 	var getHintBtn = document.getElementById('hintBtn');
 	var getPlayBtn = document.getElementById('playBtn');
@@ -20,10 +21,11 @@ window.onload = function(){
 	var letterBtn;	 		//letter buttons
 	var letterGuess;		//guessed letter
 	var counter;			//counter used to compare with guess array. if values = , user wins
-	var guesses;		//array used to store length of word
+	var guesses;			//array used to store length of word
 	var lives;
 	var counter;
 	var selectCategory;
+	var space;
 
 	//Render letters on screen
 	var renderLetters = function (){
@@ -50,12 +52,13 @@ window.onload = function(){
 
 			//place letter inside variable to compare with word letters
 			letterGuess = this.innerHTML.toLowerCase();
+			this.onclick = null;
 						
 			for(var i = 0; i < word.length; i++)
 				if(word[i] === letterGuess){
 
 					counter++
-					console.log("counter: " + counter)
+					
 					renderLives();
 					guesses[i].innerHTML = letterGuess.toUpperCase();
 				}
@@ -75,12 +78,13 @@ window.onload = function(){
 		getLives.innerHTML =  lives + " guesses left";
 
 		if(lives < 1){
-			console.log("lives: " + lives)
-			getLives.innerHTML = "You Lose";
+			
+			getOutcome.innerHTML = "YOU LOSE!";
 		}
 
-		if(counter === guesses.length){
-			getLives.innerHTML = "You Win";
+		if(counter === guesses.length - space){
+
+			getOutcome.innerHTML = "YOU WIN!";
 		}
 	}
 
@@ -96,6 +100,7 @@ window.onload = function(){
 
 			if(word[i] === "-"){
 				list.innerHTML = "-";
+				space = 1;
 				
 			} else {
 				list.innerHTML = "_";
@@ -105,22 +110,22 @@ window.onload = function(){
 			guesses.push(list);
 			wordHolder.appendChild(list);
 			emptyWord.appendChild(wordHolder);
-			console.log("word length: " + guesses.length);
+			
 		}
 	}
 
 	var category = function(){
 		if(selectCategory === categories[0]){
-			getCategoryName.innerHTML = "Cities"
+			getCategoryName.innerHTML = "CITIES"
 		}
 		if(selectCategory === categories[1]){
-			getCategoryName.innerHTML = "Sports"
+			getCategoryName.innerHTML = "SPORTS"
 		}
 		if(selectCategory === categories[2]){
-			getCategoryName.innerHTML = "Music"
+			getCategoryName.innerHTML = "MUSIC"
 		}
 		if(selectCategory === categories[3]){
-			getCategoryName.innerHTML = "TV Shows"
+			getCategoryName.innerHTML = "TV SHOWS"
 		}
 	}
 
@@ -129,8 +134,8 @@ window.onload = function(){
 		//create categories
 		categories = [
 			['toronto', 'sydney', 'tokyo', 'paris', 'london', 'tijuana', 'havana','sao-paulo','moscow','venice'],		
-			['blue-jays', 'yankees', 'red-sox', 'patriots', 'cowboys', 'maple-leafs', 'red-wings', 'bruins'],
-			['taylor-swift', 'kanye-west', 'celine-dion', 'elvis', 'thriller', 'madonna', 'rihanna', 'drake', 'bee-gees'],
+			['blue-jays', 'yankees', 'red-sox', 'david-beckham', 'cowboys', 'maple-leafs', 'lionel-messi', 'don-king'],
+			['taylor-swift', 'kanye-west', 'beyonce', 'elvis', 'thriller', 'madonna', 'rihanna', 'drake', 'beatles'],
 			['lost', 'breaking-bad', 'daredevil', 'fresh-prince', 'south-park', 'full-house', 'sopranos']
 		]
 
@@ -139,16 +144,22 @@ window.onload = function(){
 		//select random word
 		word = selectCategory[Math.floor(Math.random() * selectCategory.length)];
 
-		//console.log(word);
 		guesses = [];
 		counter = 0;
+		space = 0;
 		lives = 5;
 
-		console.log("counter: " + counter);
 		renderLetters();
 		renderBlanks();
 		renderLives();
 		category();
+
+			console.log('word length: ' + guesses.length);
+			console.log('counter: ' + counter);
+			console.log('spaces: ' + space);
+			console.log('word: ' + word);
+
+
 	}
 
 	play();	
@@ -159,15 +170,17 @@ window.onload = function(){
 	getHintBtn.onclick = function(){
 
 		hints = [
-			['4th higest population in North America', 'Home of Bondi Beach', 'Was previously known as Edo', 'Most romantic city in the world', 'Home of Heathrow Airport', 'Lies on US-Mexican border', 'Colorful city of Cuba', 'Birthplace of Neymar', 'Location of St. Basil Cathedral', 'City of canals'],
-			['Ended 22 year playoff drought', 'Richest MLB franchise', 'Yankees Rival', 'Lead by Tom Brady', 'Richest NFL franchise', 'Won Stanley Cup in \'67', 'Plays in Joe Louis Arena', 'One of the original six teams'],
-			['Has won too many awards to count', 'Controversial rapper', 'My Heart Will Go On', 'King of Rock n Roll', 'Highest selling album of all time', 'Queen of Pop', 'Born in Barbados', 'Canadian rapper', 'Stayin Alive'],
-			['Strangers stuck on an island','School teacher turned drug dealer','Blind superhero', 'Will & Carlton', '4 kids in Colorado', 'Opposite of an empty house', 'Mobster and his family']
+			['4th highest population in North America', 'Home of Bondi Beach', 'Was previously known as Edo', 'Most romantic city in the world', 'Home of Heathrow Airport', 'Lies on US-Mexican border', 'Colorful city of Cuba', 'Birthplace of Neymar', 'Location of St. Basil Cathedral', 'City of canals'],
+			['Ended 22 year playoff drought', 'Richest MLB franchise', 'Team of Fenway Park', 'Married to a Spice Girl', 'Richest NFL franchise', 'Won Stanley Cup in \'67', 'Argentinian soccer superstar', 'Legendary boxing promoter (he has tall hair)'],
+			['Country turned Pop singer', 'Musician, Artist, Fashion Designer', 'Former lead singer of popular RnB group', 'King of Rock n Roll', 'Highest selling album of all time', 'Queen of Pop', 'Born in Barbados', 'Canadian rapper', '4 member band from Liverpool'],
+			['Survivors stuck on a mysterious island','School teacher turned drug dealer','Blind superhero', '3 children & 1 nephew living together', '4 kids in Colorado', 'Opposite of an empty house', 'Mobster and his family']
 		]
 
 		categoriesIndex = categories.indexOf(selectCategory);
 		wordIndex = selectCategory.indexOf(word);
 
+		// show clue by setting CSS showClue class
+		clue.setAttribute('id', 'showClue');
 		clue.innerHTML = hints[categoriesIndex][wordIndex]
 
 	}
@@ -176,6 +189,10 @@ window.onload = function(){
 	getPlayBtn.onclick = function() {
 		wordHolder.parentNode.removeChild(wordHolder);
 		ul.parentNode.removeChild(ul);
+		getOutcome.innerHTML = "";
+
+		// hide hint container 
+		clue.setAttribute('id', clue);
 		clue.innerHTML = "";
 		play();
 	}
