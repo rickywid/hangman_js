@@ -78,12 +78,14 @@ window.onload = function(){
 		getLives.innerHTML =  lives + " guesses left";
 
 		if(lives < 1){
-			
+			console.log(true)
+			getOutcome.className = "animated zoomIn";
 			getOutcome.innerHTML = "YOU LOSE!";
 		}
 
 		if(counter === guesses.length - space){
-
+			console.log(true)
+			getOutcome.className = "animated zoomIn";
 			getOutcome.innerHTML = "YOU WIN!";
 		}
 	}
@@ -190,6 +192,9 @@ window.onload = function(){
 		wordHolder.parentNode.removeChild(wordHolder);
 		ul.parentNode.removeChild(ul);
 		getOutcome.innerHTML = "";
+
+		//clear animate zoomIn CSS class
+		getOutcome.className = "";
 
 		// hide hint container 
 		clue.setAttribute('id', clue);
