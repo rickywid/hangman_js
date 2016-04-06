@@ -139,7 +139,7 @@ window.onload = function(){
 			['toronto', 'sydney', 'tokyo', 'paris', 'london', 'tijuana', 'havana','las-vegas','moscow','venice'],		
 			['blue-jays', 'yankees', 'red-sox', 'david-beckham', 'cowboys', 'maple-leafs', 'lionel-messi', 'don-king'],
 			['taylor-swift', 'kanye-west', 'beyonce', 'elvis', 'thriller', 'madonna', 'rihanna', 'drake', 'beatles'],
-			['lost', 'breaking-bad', 'daredevil', 'fresh-prince', 'south-park', 'sesame street', 'jeopardy']
+			['lost', 'breaking-bad', 'daredevil', 'fresh-prince', 'south-park', 'sesame-street', 'jeopardy']
 		]
 
 		//select random category
