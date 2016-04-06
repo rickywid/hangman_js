@@ -49,6 +49,7 @@ window.onload = function(){
 		letterBtn.onclick = function(){
 
 			this.setAttribute('class', 'active');
+			this.className += " animated bounceOutDown"; 
 
 			//place letter inside variable to compare with word letters
 			letterGuess = this.innerHTML.toLowerCase();
