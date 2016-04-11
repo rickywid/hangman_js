@@ -5,10 +5,15 @@ A Hangman game built in Javascript. For anyone who's ever played Hangman before 
 
 ## Installation
 ```
-git clone https://github.com/rickywid/react-weather.git
+git clone https://github.com/rickywid/hangman_js.git
 npm install
 npm start
 browser url: localhost:8080
 
+```
+
+## Live DEMO
+```
+http://rickywid.github.io/hangman_js
 ```
 
