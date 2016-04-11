@@ -13,7 +13,6 @@ browser url: localhost:8080
 ```
 
 ## DEMO
-```
 See a [Live Demo] (https://rickywid.github.io/hangman_js/)
-```
+
 
