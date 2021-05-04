@@ -12,7 +12,6 @@ browser url: localhost:8080
 
 ```
 
-## DEMO
-See a :rocket: [Live Demo](https://rickywid.github.io/hangman_js/)
+:rocket: [LIVE SITE](https://rickywid.github.io/hangman_js/)
 
 
